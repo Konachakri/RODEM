@@ -1,0 +1,14 @@
+<div class="parent">
+    <div class="child">
+        <h1>Radius</h1>
+        <label for=""></label>
+        <input type="number" [(ngModel)]="radius" placeholder="enter the value here">
+        <br>
+
+        <button [disabled]="!radius" (click)="area()">Area</button>
+        <button [disabled]="!radius" (click)="parameter()">Parameter</button>
+
+        <h1>{{result}}</h1>
+        </div>
+        </div>
+        

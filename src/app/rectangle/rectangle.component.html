@@ -1,0 +1,14 @@
+<div class="parent">
+    <div class="child">
+<label>Length</label>
+<input type="number" [(ngModel)]="length" placeholder="enter the length here">
+<br>
+<label>Breadth</label>
+<input type="number" [(ngModel)]="breadth" placeholder="enter the breadth here">
+
+<button [disabled]="!length||!breadth" (click)="Area()">Area</button>
+<button [disabled]="!length||!breadth" (click)="Parameter()">Parameter</button>
+
+<h1>{{result}}</h1>
+    </div>
+</div>

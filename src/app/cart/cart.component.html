@@ -1,0 +1,29 @@
+<p>cart works!</p>
+
+
+<h1>Cart</h1>
+<label for="">Name</label>
+<input type="text" placeholder="enter the name" [(ngModel)]="newitems.name">
+<label for="">Price</label> 
+<input type="number" placeholder="enter the price" [(ngModel)]="newitems.price">
+<label>Rating</label>
+<input type="number" placeholder="enter the rating" [(ngModel)]="newitems.rating">
+<br>
+<button (click)="add()">Add to cart</button>
+<h1>cart items</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.rating}}</td>
+        </tr>
+    </tbody>
+</table>

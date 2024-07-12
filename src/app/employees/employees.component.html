@@ -1,0 +1,65 @@
+<p>employees works!</p>
+
+<h4>Employees Table</h4>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>DOB</th>
+            <th>Experience</th>
+            <th>Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees" [ngClass]="{'low1':employee.package>10}">
+<td>{{employee.name}}</td>
+<td>{{employee.age}}</td>
+<td>{{employee.dob | date:'yyyy-MM-dd'}}</td>
+<td [ngClass]="{'low':employee.experience<3, 'medium':employee.experience>=3 && employee.experience<5, 'high':employee.experience>5}" >{{employee.experience}}</td>
+<td>{{employee.package}}</td>
+        </tr>
+    </tbody>
+    
+</table>
+
+
+<!-- <h2>Event Registration</h2>
+<label for="">Name</label>
+<input type="text" placeholder="enter name" [(ngModel)]="newuser">
+<br>
+<button (click)="reg()">Register</button>
+<h3>Registerd Users</h3>
+<ol>
+    <li *ngFor="let user of user">{{user}}</li>
+</ol>
+
+
+<h1>Cart</h1>
+<label for="">Name</label>
+<input type="text" placeholder="enter the name" [(ngModel)]="newitems.name">
+<label for="">Price</label>
+<input type="text" placeholder="enter the price" [(ngModel)]="newitems.price">
+<label>Rating</label>
+<input type="text" placeholder="ente the rating" [(ngModel)]="newitems.rating">
+<br>
+<button (click)="add()">Add to cart</button>
+<h4>cart items</h4>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.rating}}</td>
+        </tr>
+    </tbody>
+</table> -->
+

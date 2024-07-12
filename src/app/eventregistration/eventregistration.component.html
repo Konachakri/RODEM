@@ -1,0 +1,11 @@
+<p>eventregistration works!</p>
+
+<h2>Event Registration</h2>
+<label for="">Name</label>
+<input type="text" placeholder="enter name" [(ngModel)]="newuser">
+<br>
+<button (click)="reg()">Register</button>
+<h3>Registerd Users</h3>
+<ol>
+    <li *ngFor="let user of user">{{user}}</li>
+</ol>

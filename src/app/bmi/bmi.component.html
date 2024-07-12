@@ -1,0 +1,18 @@
+<div class="parent">
+    <div class="child">
+        <h1>Bmi</h1>
+        <label for="">Height</label>
+        <input type="number" [(ngModel)]="height">
+
+        <label for="">Weight</label>
+        <input type="number" [(ngModel)]="weight">
+
+        <button [disabled]="!height||!weight" (click)="calculate()">Calculate</button>
+
+        <h1>Your Bmi</h1>
+        <h1>{{result}}</h1>
+    </div>
+    <div>
+        <img src="https://www.cdc.gov/healthyweight/images/assessing/bmi-adult-fb-600x315.jpg">
+    </div>
+</div>
