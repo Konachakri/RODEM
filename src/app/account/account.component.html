@@ -1,0 +1,60 @@
+<p>account works!</p>
+
+<input type="text" placeholder="Account_name search" [(ngModel)]="term" (keyup)="filter()">
+
+<label for="">column</label>
+<select name="" id="" [(ngModel)]="column">
+    <option>available_balance</option>
+    <option>account_number</option>
+</select>
+    <label for="">order</label>
+    <select name="" id="" [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+    </select>
+    <button (click)="sort()">sort</button>
+
+    <input type="number" placeholder=" search id"  [(ngModel)]="number" (keypress)="specific()">
+
+    <label for="">limit</label>
+    <select name="" id="" [(ngModel)]="limit">
+        <option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>40</option>
+        <option>50</option>
+    </select>
+    <label for="">pageno</label>
+    <select name="" id="" [(ngModel)]="pages">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <button (click)="page()">page</button>
+
+<table>
+    <thead>
+        <tr >
+            <th>account_name</th>
+            <th>available_balance</th>
+            <th>account_number</th>
+            <th>city</th>
+            <th>profile_picture</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td>
+                <img src="{{account.profie_picture}}" alt="" width="100px">
+            </td>
+            <td>{{account.id}}</td>
+        </tr>
+    </tbody>
+</table>

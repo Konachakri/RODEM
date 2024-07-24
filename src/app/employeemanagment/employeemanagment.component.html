@@ -1,0 +1,86 @@
+<h4>Employees Data</h4>
+
+<div>
+<input type="text" placeholder="search" [(ngModel)]="ename" (keypress)="search(ename)">
+</div>
+
+<div class="m-1">
+    <button (click)="packhl()">package hightolow</button>
+    <button (click)="packlh()">package lowtohigh</button>
+    <button (click)="exphl()">experience hightolow</button>
+    <button (click)="explh()">experience lowtohigh</button>
+</div>
+<div class="m-2">
+    <form (ngSubmit)="addtoemp()">
+        <div class="m-2-1">
+            <label>Name:</label>
+            <input type="text" name="name" [(ngModel)]="emp.name">
+        </div>
+        <div class="m-2-2">
+        <label >Emp id:</label>
+        <input type="number" name="emp id"[(ngModel)]="emp.empid">
+        </div>
+        <div class="m-2-3">
+            <label>Age:</label>
+        <input type="number" name="age" [(ngModel)]="emp.age">
+        </div>
+        <div class="m-2-4">
+            <label>phonenumber</label>
+            <input type="number" name="phonenumber" [(ngModel)]="emp.phonenumber">
+        </div>
+        <div class=" m-2-5">
+        <label>email</label>
+        <input type="email" name="email" [(ngModel)]="emp.email">
+        </div>
+        <div class=" m-2-6">
+<label>DOB:</label>
+<input type="date" name="DOB" [(ngModel)]="emp.dob">
+        </div>
+        <div class="m-2-7">
+            <label>Experience:</label>
+            <input type="number" name="experience" [(ngModel)]="emp.experience">
+        </div>
+        <div class=" m-2-8">
+            <label>Package:</label>
+            <input type="number" name="package" [(ngModel)]="emp.package">
+        </div>
+        <div class=" m-2-9">
+            <button>Add employee</button>
+        </div>
+    </form>
+</div>
+<table>
+    <thead>
+        <tr>
+            
+            <th>S.NO</th>
+            <th>NAME</th>
+            <th>AGE</th>
+            <th>PHONE NUMBER</th>
+            <th>EMAIL</th>
+            <th>DOB</th>
+            <th>EXPERIENCE</th>
+            <th>PACKAGE</th>
+            <th>EMP ID</th>
+            <th>ACTION</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;let i=index" >
+            <td>{{i+1}}</td>
+<td>{{employee.name}}</td>
+<td>{{employee.age}}</td>
+<td>{{employee.phonenumber}}</td>
+<td>{{employee.email}}</td>
+<td>{{employee.dob | date:'yyyy-MM-dd'}}</td>
+<td >{{employee.experience}}</td>
+<td>{{employee.package}}</td>
+<td>{{employee.empid}}</td>
+<td>
+                    <button class="b" (click)="delete(i)">delete</button>
+                </td>
+        </tr>
+    </tbody>
+    
+</table>

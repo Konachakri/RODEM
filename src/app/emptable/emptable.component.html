@@ -1,0 +1,94 @@
+<div class="main-div">
+    <div class="first-div">
+      <input placeholder="search for employee here..." [(ngModel)]="emp" (keypress)="search(emp)">
+      <button class="round-plus" (click)="openModal()"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fa fa-plus-circle" ></i> add employee
+      </button>
+    </div>
+    <div class="second-div">
+      <button (click)="sortByLowToHigh()">package low to high</button>
+      <button (click)="sortByHighToLow()">package high to low</button>
+    </div>
+    <div>
+      <button (click)="totalEmployees()">Total employees</button>
+    </div>
+    <div class="bottom">
+      <table>
+        <thead>
+          <tr>
+            <th>s.no</th>
+            <th>emp name</th>
+            <th>package</th>
+            <th>Age</th>
+            <th>DOJ</th>
+            <th>action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ employee.EmpName }}</td>
+            <td>{{ employee.package }}</td>
+            <td>{{ employee.age }}</td>
+            <td>{{ employee.doj | date:'yyyy-MM-dd'}}</td>
+           
+            <td>
+              <button (click)="delete(i)" style="background-color: rgb(173, 160, 85);">Edit</button>
+              <button (click)="delete(i)">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+  <!-- Modal -->
+  
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Enter details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="addtoCart()"> 
+            <div class="r1">
+                <label for="">name:</label>
+                <input type="text" [(ngModel)]="newEmp.EmpName" name="name" placeholder="enter name here..">
+            </div>
+            <div class="r2">
+                <label for="">package:</label>
+                <input type="number" [(ngModel)]="newEmp.package" name="price" placeholder="enter package here...">
+            </div>
+            <div class="r3">
+                <label for="">Age:</label>
+                <input type="number" [(ngModel)]="newEmp.age" name="rating" placeholder="rate this item..">
+            </div>
+            <div class="r3">
+              <label for="">DOJ:</label>
+              <input type="date" [(ngModel)]="newEmp.doj" name="rating" placeholder="rate this item..">
+          </div>
+            <div class="r4">
+                <label for="">Gender:</label>
+                <input id="qw" type="radio" name="qq"  [value]="true">
+                <label for="qw">male</label>
+                <input id="we" type="radio" name="qq"  [value]="false">
+                <label for="we">female</label>
+            </div>
+            <div class="r5">
+              <button type="cancel">Cancel</button>
+                <button type="submit" (click)="addEmployee()">Add employee</button>
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+  
+  
+  

@@ -1,0 +1,59 @@
+<!-- <p>myntra works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>description</th>
+            <th>category</th>
+            <th>image</th>
+            <th>rate</th>
+            <th>count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.category}}</td>
+            <td>
+                <img src="{{product.image}}" alt="" width="100px">
+            </td>
+            <td>{{product.rating.rate}}</td>
+            <td>{{product.rating.count}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+ -->
+<div class="top">
+    <div class="left">
+        <h5>FILTERS</h5>
+        <h5>CATEGORIES</h5>
+        <input type="checkbox">MENS CLOTHING<br>
+        <input type="checkbox">JEWELLERY<br>
+        <input type="checkbox">ELECTROONICS<br>
+        <input type="checkbox">WOMENS CLOTHING<br>
+        <h5>PRICE</h5>
+        <input type="checkbox">RS.7 to RS.50<br>
+        <input type="checkbox">RS.50 to RS.300<br>
+        <input type="checkbox">RS.300 to Rs.600<br>
+        <input type="checkbox">RS.600 to RS.1000<br>
+    </div>
+
+<div class="main">
+    <tr *ngFor="let product of products">
+        <div class="first"><img src="{{product.image}}" alt="" width="200px" height="200px" ></div>
+        <div class="second">
+            <h4>{{product.category}}</h4>
+            <div class="title">{{product.title}}</div>
+            <div class="price">{{product.price}}</div>
+        </div>
+    </tr>
+    </div>
+    </div>

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { createComponent, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -15,6 +15,17 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { DashbooardComponent } from './dashbooard/dashbooard.component';
 
+import { AmazonComponent } from './amazon/amazon.component';
+import { EmployeemanagmentComponent } from './employeemanagment/employeemanagment.component';
+import { EmptableComponent } from './emptable/emptable.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { AccountComponent } from './account/account.component';
+import { MyntraComponent } from './myntra/myntra.component';
+import { MailComponent } from './mail/mail.component';
+import { PhotoComponent } from './photo/photo.component';
+import { ReloadComponent } from './reload/reload.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path: 'dashbooard',component:DashbooardComponent , children:[
@@ -29,7 +40,17 @@ const routes: Routes = [
   {path:'Pipes',component:PipesComponent},
   {path:'Employees',component:EmployeesComponent},
   {path:'Event Registration',component:EventregistrationComponent},
-  {path:'Cart',component:CartComponent}
+  {path:'Cart',component:CartComponent},
+  {path:'Amazon',component:AmazonComponent},
+  {path:'Employee-management',component:EmployeemanagmentComponent},
+  {path:'Emp-Table',component:EmptableComponent},
+  {path:'vehicle',component:VehicleComponent},
+  {path:'account',component:AccountComponent},
+  {path:'myntra',component:MyntraComponent},
+  {path:'Mail',component:MailComponent},
+  {path:'Reload',component:ReloadComponent},
+  {path:'Photo',component:PhotoComponent},
+  {path:'create-vehicle',component:CreateVehicleComponent}
  
 ]},
 

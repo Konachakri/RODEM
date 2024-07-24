@@ -1,0 +1,240 @@
+/* / Main container style / */
+.main-div {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* / Style for the input and button in the first-div / */
+.first-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.first-div input {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 3%;
+}
+
+.first-div .round-plus {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: #3caf64;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-div .round-plus:hover {
+  background-color: #10a03b;
+}
+.first-div button{
+    background-color: #327c49;
+}
+
+/* / Style for the sort buttons / */
+.second-div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.second-div button {
+    padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #222475;
+  color: white;
+  cursor: pointer;
+  width: 15%;
+  margin-right: 3%;
+}
+
+.second-div button:hover {
+  background-color: #0056b3;
+}
+
+/* / Style for the total employees button / */
+.second-div + div button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5d6e72;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.second-div + div button:hover {
+  background-color: #44586b;
+}
+
+/* / Table style / */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: ce;
+}
+
+table th {
+  background-color:rgb(159, 191, 247);
+  color: black;
+}
+
+table td button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #dc3545;
+  color: rgba(6, 2, 2, 0.945);
+  cursor: pointer;
+  margin-left: 8%;
+  margin-right: 8%;
+  width: 30%;
+}
+
+table td button:hover {
+  background-color: #c82333;
+}
+
+/* / Modal style / */
+.modal-content {
+  border-radius: 8px;
+}
+
+.modal-header {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.modal-footer {
+  border-top: 1px solid #dee2e6;
+}
+
+.modal-footer .btn-primary {
+  background-color: #007bff;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #6c757d;
+}
+
+
+/* / Style for the modal content / */
+.modal-content {
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  /* / Style for the modal header / */
+  .modal-header {
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* / Style for the modal title / */
+  .modal-title {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  /* / Style for the modal body / */
+  .modal-body {
+    padding: 20px;
+  }
+  
+  /* / Style for the form rows / */
+  .modal-body .r1, 
+  .modal-body .r2, 
+  .modal-body .r3, 
+  .modal-body .r4, 
+  .modal-body .r5 {
+    margin-bottom: 15px;
+  }
+  
+  /* / Style for the labels / */
+  .modal-body label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* / Style for the input fields / */
+  .modal-body input[type="text"],
+  .modal-body input[type="number"],
+  .modal-body input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  /* / Style for the radio buttons / */
+  .modal-body input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  /* / Style for the form buttons / */
+  .modal-body button[type="cancel"],
+  .modal-body button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .modal-body button[type="cancel"] {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-body button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-body button[type="cancel"]:hover {
+    background-color: #c82333;
+  }
+  
+  .modal-body button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* / Style for the modal footer / */
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
+  
+  .modal-footer .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
