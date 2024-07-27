@@ -2,16 +2,16 @@
 <div class="main">
     <div class="main1">
         <h2>Login</h2>
-        <form>
+        <form [formGroup]="loginForm">
  <div class="name">
-<label for="">Name</label>
-<input type="usernamel" id="username" name="username">
+<label for="">Email</label>
+<input type="email"  formControlName="email">
 </div>
 <div class="password">
 <label for="">Password</label>  
-<input type="password" id="password" name="password">
+<input type="password" id="password" name="password" formControlName="password">
 </div>
-<button routerLink="/dashbooard">Login</button>
+<button (click)="login()">Login</button>
 </form>
 </div>
 </div>

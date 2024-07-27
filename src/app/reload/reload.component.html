@@ -1,1 +1,12 @@
 <p>reload works!</p>
+
+
+<div class="product-container">
+    <h2>Random Product</h2>
+    <h3>{{ product.title }}</h3>
+    <img [src]="product.image" alt="Product Image" class="product-image" width="200px">
+    <p>{{ product.description }}</p>
+    <p><strong>Price: ${{ product.price }}</strong></p>
+    <button class="button" (click)="fetchProduct()">Reload</button>
+  </div>
+  

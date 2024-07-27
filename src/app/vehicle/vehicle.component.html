@@ -41,6 +41,8 @@
             <th>cost</th>
             <th>id</th>
             <th>Actions</th>
+            <th>Actions</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -58,6 +60,12 @@
             <td>{{vehicle.id}}</td>
             <td>
                 <button class="delete" (click)="delete(vehicle.id)">delete</button>
+            </td>
+            <td>
+                <button routerLink="/dashbooard/vehicle-details/{{vehicle.id}}">View</button>
+            </td>
+            <td>
+                <button routerLink="/dashbooard/edit-vehicle/{{vehicle.id}}">Edit</button>
             </td>
         </tr>
     </tbody>

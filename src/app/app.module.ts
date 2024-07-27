@@ -30,6 +30,12 @@ import { MailComponent } from './mail/mail.component';
 import { PhotoComponent } from './photo/photo.component';
 import { ReloadComponent } from './reload/reload.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentComponent } from './student/student.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +64,13 @@ import { CreateVehicleComponent } from './create-vehicle/create-vehicle.componen
      MailComponent,
      PhotoComponent,
      ReloadComponent,
-     CreateVehicleComponent
+     CreateVehicleComponent,
+     CreateAccountComponent,
+     StudentComponent,
+     CreateStudentComponent,
+     VehicleDetailsComponent,
+     AccountDetailsComponent,
+     StudentDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,39 @@
+<p>student works!</p>
+
+<input type="text" placeholder="search" (keyup)="filter()" [(ngModel)]="term">
+<br>
+
+
+
+
+<div class="card" *ngFor="let student of students">
+    <div class="firtst">
+        <div class="img">
+            <img src="{{student.school_logo}}" alt="" >
+        </div>
+        <div class="second">
+            <h4>{{student.school_name}}</h4>
+            <h4>{{student.school_city}}</h4>
+            <h4>{{student.school_pin}}</h4>
+        </div>
+    </div>
+    <div class="first-1">
+        <div class="img-1">
+            <img src="{{student.profile_picture}}" alt="">
+        </div>
+        <div class="second-1">
+            <h4>NAME:{{student.name}}</h4>
+            <h4>ID:{{student.id}}</h4>
+            <h4>PHONE:{{student.phone}}</h4>
+            <h4>EMAIL:{{student.email}}</h4>
+            <h4>CITY:{{student.city}}</h4>
+            <h4>DOB:{{student.dob}}</h4>
+            <div >
+                <button class="view" routerLink="/dashbooard/student-details/{{student.id}}">View</button>
+                <button class="edit" routerLink="/dashbooard/edit-student/{{student.id}}">Edit</button>
+                <button class="delete" (click)="delete(student.id)">Delete</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

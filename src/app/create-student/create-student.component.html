@@ -1,0 +1,50 @@
+<p>create-student works!</p>
+
+<h1>{{ id ? 'Edit Student Form':'Create Student Form'}}</h1>
+
+<h2>Create Account Form</h2>
+
+<form [formGroup]="studentForm">
+
+<label for="">School_logo:</label>
+<input type="text" formControlName="school_logo">
+<br>
+
+<label for="">School_name:</label>
+<input type="text" formControlName="school_name">
+<br>
+
+<label for="">School_city:</label>
+<input type="text" formControlName="school_city">
+<br>
+
+<label for="">School_pin:</label>
+<input type="text" formControlName="school_pin">
+<br>
+
+<label for="">Profile_picture:</label>
+<input type="text" formControlName="profile_picture">
+<br>
+
+<label for="">Name:</label>
+<input type="text" formControlName="name">
+<br>
+
+<label for="">Phone:</label>
+<input type="text" formControlName="phone">
+<br>
+
+<label for="">Email:</label>
+<input type="text" formControlName="email">
+<br>
+
+<label for="">City:</label>
+<input type="text" formControlName="city">
+<br>
+
+<label for="">Dob:</label>
+<input type="text" formControlName="dob">
+<br>
+
+<button (click)="submit()">{{id ? 'edit':'create'}}</button>
+</form>

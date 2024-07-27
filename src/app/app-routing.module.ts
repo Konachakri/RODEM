@@ -25,6 +25,12 @@ import { MailComponent } from './mail/mail.component';
 import { PhotoComponent } from './photo/photo.component';
 import { ReloadComponent } from './reload/reload.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+import { StudentComponent } from './student/student.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -50,7 +56,16 @@ const routes: Routes = [
   {path:'Mail',component:MailComponent},
   {path:'Reload',component:ReloadComponent},
   {path:'Photo',component:PhotoComponent},
-  {path:'create-vehicle',component:CreateVehicleComponent}
+  {path:'create-vehicle',component:CreateVehicleComponent},
+  {path:'create-account',component:CreateAccountComponent},
+  {path:'student',component:StudentComponent},
+  {path:'create-student',component:CreateStudentComponent},
+  {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+  {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+  {path:'account-details/:id',component:AccountDetailsComponent},
+  {path:'edit-account/:id',component:CreateAccountComponent},
+  {path:'student-details/:id',component:StudentDetailsComponent},
+  {path:'edit-student/:id',component:CreateStudentComponent}
  
 ]},
 

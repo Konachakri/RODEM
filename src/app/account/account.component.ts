@@ -15,11 +15,12 @@ export class AccountComponent implements OnInit {
   public number:number=0;
   public limit:number=0;
   public pages:number=0;
+  public id:string="";
 
 
-  constructor(private _AccountService:AccountService ) {
+  constructor(private _accountService:AccountService ) {
 
-    _AccountService.getAccounts().subscribe(
+    _accountService.getAccounts().subscribe(
       (data:any)=>{
         this.accounts=data;
       },
@@ -32,7 +33,7 @@ export class AccountComponent implements OnInit {
   ngOnInit(): void {
   }
   filter(){
-    this._AccountService.getFilterdAccounts(this.term).subscribe(
+    this._accountService.getFilterdAccounts(this.term).subscribe(
       (data:any)=>{
         this.accounts=data;
       },
@@ -42,7 +43,7 @@ export class AccountComponent implements OnInit {
     )
   }
   sort(){
-    this._AccountService.getSortedAccounts(this.column,this.order).subscribe(
+    this._accountService.getSortedAccounts(this.column,this.order).subscribe(
       (data:any)=>{
         this.accounts=data;
       },
@@ -53,7 +54,7 @@ export class AccountComponent implements OnInit {
     )
   }
   specific(){
-    this._AccountService.getSpecificAccounts(this.number).subscribe(
+    this._accountService.getSpecificAccounts(this.number).subscribe(
       (data:any)=>{
         this.accounts=data;
       },
@@ -63,7 +64,7 @@ export class AccountComponent implements OnInit {
     )
   }
   page(){
-    this._AccountService.getPagedAccounts(this.limit,this.pages).subscribe(
+    this._accountService.getPagedAccounts(this.limit,this.pages).subscribe(
       (data:any)=>{
         this.accounts=data;
       },
@@ -71,6 +72,17 @@ export class AccountComponent implements OnInit {
         alert("internal server error")
       }
 
+    )
+  }
+
+  delete(id:string){
+    this._accountService.deleteAccounts(id).subscribe(
+      (data:any)=>{
+        alert("deleted successflly");
+      },
+      (err:any)=>{
+        alert("deletion failed");
+      }
     )
   }
 
