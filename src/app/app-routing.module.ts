@@ -31,10 +31,12 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path: 'dashbooard',component:DashbooardComponent , children:[
+  {path: 'dashbooard', canActivate:[AuthenticationGuard],component:DashbooardComponent , children:[
   {path:'Welcome',component:WelcomeComponent},
   {path:'Calculator',component:CalculatorComponent},
   {path:'Data-Binding',component:DataBindingComponent},
@@ -65,7 +67,8 @@ const routes: Routes = [
   {path:'account-details/:id',component:AccountDetailsComponent},
   {path:'edit-account/:id',component:CreateAccountComponent},
   {path:'student-details/:id',component:StudentDetailsComponent},
-  {path:'edit-student/:id',component:CreateStudentComponent}
+  {path:'edit-student/:id',component:CreateStudentComponent},
+  {path:'User',component:UserComponent}
  
 ]},
 
