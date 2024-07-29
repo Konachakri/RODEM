@@ -38,6 +38,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { UserComponent } from './user/user.component';
 import { CapitalDirective } from './capital.directive';
+import { PricePipe } from './price.pipe';
+import { CompanyComponent } from './company/company.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +76,9 @@ import { CapitalDirective } from './capital.directive';
      AccountDetailsComponent,
      StudentDetailsComponent,
      UserComponent,
-     CapitalDirective
+     CapitalDirective,
+     PricePipe,
+     CompanyComponent
   ],
   imports: [
     BrowserModule,

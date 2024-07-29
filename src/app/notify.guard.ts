@@ -11,7 +11,7 @@ export class NotifyGuard implements CanDeactivate<unknown> {
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    return confirm("If you go back yoour progress will not save. Are you willing to go back?")
+    return confirm("If you go back your progress will not save. Are you willing to go back?")
   }
   
 }
