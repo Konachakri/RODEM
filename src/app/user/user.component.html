@@ -68,11 +68,44 @@
             <p class="name" *ngIf="userForm.get('hostelfee')?.errors?.['required']">Hostel fee required</p>
             <p class="name" *ngIf="userForm.get('hostelfee')?.errors?.['min']">Minimum 15k fee required</p>
         </div>
-
         <br>
+        
     </div>
     </div>
     <!-- Dynamic Form -->
+
+    <div>
+        <label for="">cards</label>
+        <button (click)="addCard()">add card</button>
+    </div>
+    <br>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <h3>card{{i+1}}</h3>
+                <label>Number:</label>
+                <input type="number" formControlName="number">
+                <div *ngIf="cardsFormArray.controls[i].get('number')?.touched && cardsFormArray.controls[i].get('number')?.invalid">
+                    <p class="name" *ngIf="cardsFormArray.controls[i].get('number')?.errors?.['required']">Card number is required</p>
+                </div>
+                <br>
+                <label>Expiry:</label>
+                <input type="month" formControlName="expiry">
+                <div *ngIf="cardsFormArray.controls[i].get('expiry')?.touched && cardsFormArray.controls[i].get('expiry')?.invalid">
+                    <p class="name" *ngIf="cardsFormArray.controls[i].get('expiry')?.errors?.['required']">Expiry date is required</p>
+                </div>
+                <br>
+                <label>CVV:</label>
+                <input type="number" formControlName="cvv">
+                <div *ngIf="cardsFormArray.controls[i].get('cvv')?.touched && cardsFormArray.controls[i].get('cvv')?.invalid">
+                    <p class="name" *ngIf="cardsFormArray.controls[i].get('cvv')?.errors?.['required']">CVV is required</p>
+                </div>
+                <br>
+                <button (click)="deletecard(i)">deletecard</button>
+                <hr>
+            </div>
+        </div>
+    </div>
     <button (click)="submit()">Submit</button>
     <!-- <button [disabled]="userForm.invalid" (click)="submit()">Submit2</button> -->
 </form>
