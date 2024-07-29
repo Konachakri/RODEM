@@ -33,6 +33,7 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { UserComponent } from './user/user.component';
+import { NotifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -68,7 +69,7 @@ const routes: Routes = [
   {path:'edit-account/:id',component:CreateAccountComponent},
   {path:'student-details/:id',component:StudentDetailsComponent},
   {path:'edit-student/:id',component:CreateStudentComponent},
-  {path:'User',component:UserComponent}
+  {path:'User', canDeactivate:[NotifyGuard],component:UserComponent}
  
 ]},
 

@@ -27,6 +27,8 @@
     <input type="email" formControlName="email">
     <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
         <p class="name" *ngIf="userForm.get('email')?.errors?.['required']">Email required</p>
+        <p class="name" *ngIf="userForm.get('email')?.errors?.['emai']">Invalid email format</p>
+        <p class="name" *ngIf="userForm.get('email')?.errors?.['domainValidator']">Only infosys mails accepted</p>
     </div>
     <div formGroupName="address" class="address">
         <label for="">City:</label>
