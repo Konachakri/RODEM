@@ -37,6 +37,7 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { UserComponent } from './user/user.component';
+import { CapitalDirective } from './capital.directive';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { UserComponent } from './user/user.component';
      VehicleDetailsComponent,
      AccountDetailsComponent,
      StudentDetailsComponent,
-     UserComponent
+     UserComponent,
+     CapitalDirective
   ],
   imports: [
     BrowserModule,
