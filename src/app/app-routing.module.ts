@@ -35,6 +35,8 @@ import { AuthenticationGuard } from './authentication.guard';
 import { UserComponent } from './user/user.component';
 import { NotifyGuard } from './notify.guard';
 import { CompanyComponent } from './company/company.component';
+import { ParentComponent } from './parent/parent.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
 
 
 const routes: Routes = [
@@ -72,7 +74,9 @@ const routes: Routes = [
   {path:'student-details/:id',component:StudentDetailsComponent},
   {path:'edit-student/:id',component:CreateStudentComponent},
   {path:'User', canDeactivate:[NotifyGuard],component:UserComponent},
-  {path:'company',canDeactivate:[NotifyGuard],component:CompanyComponent}
+  {path:'company',canDeactivate:[NotifyGuard],component:CompanyComponent},
+  {path:'parent',component:ParentComponent},
+  {path:'calculator2',component:Calculator2Component}
   
  
 ]},

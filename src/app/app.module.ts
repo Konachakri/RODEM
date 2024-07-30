@@ -40,6 +40,12 @@ import { UserComponent } from './user/user.component';
 import { CapitalDirective } from './capital.directive';
 import { PricePipe } from './price.pipe';
 import { CompanyComponent } from './company/company.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
+import { OperationsComponent } from './operations/operations.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +84,13 @@ import { CompanyComponent } from './company/company.component';
      UserComponent,
      CapitalDirective,
      PricePipe,
-     CompanyComponent
+     CompanyComponent,
+     ParentComponent,
+     ChildComponent,
+     Sibling1Component,
+     Sibling2Component,
+     Calculator2Component,
+     OperationsComponent
   ],
   imports: [
     BrowserModule,
