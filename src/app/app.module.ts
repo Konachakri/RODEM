@@ -46,6 +46,7 @@ import { Sibling1Component } from './sibling1/sibling1.component';
 import { Sibling2Component } from './sibling2/sibling2.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
 import { OperationsComponent } from './operations/operations.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { OperationsComponent } from './operations/operations.component';
      Sibling1Component,
      Sibling2Component,
      Calculator2Component,
-     OperationsComponent
+     OperationsComponent,
+     RatingComponent
   ],
   imports: [
     BrowserModule,

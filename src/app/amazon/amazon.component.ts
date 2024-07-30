@@ -85,6 +85,10 @@ addtoCart() {
 this.newitem={productname:'',price:0,rating:0,freedelivery:false};
 }
 
+
+
 }
+
+
 
 
