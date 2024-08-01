@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-sibling1',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sibling1.component.css']
 })
 export class Sibling1Component implements OnInit {
+  public count:number=0;
 
-  constructor() { }
+  constructor(private _commonService:CommonService) { }
 
   ngOnInit(): void {
+  }
+
+  countchange(){
+    this._commonService.setCount(this.count);
   }
 
 }

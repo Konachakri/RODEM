@@ -1,5 +1,5 @@
 import { createComponent, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -37,6 +37,10 @@ import { NotifyGuard } from './notify.guard';
 import { CompanyComponent } from './company/company.component';
 import { ParentComponent } from './parent/parent.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
+import { TextComponent } from './text/text.component';
+import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { ItemsparentComponent } from './itemsparent/itemsparent.component';
 
 
 const routes: Routes = [
@@ -76,7 +80,15 @@ const routes: Routes = [
   {path:'User', canDeactivate:[NotifyGuard],component:UserComponent},
   {path:'company',canDeactivate:[NotifyGuard],component:CompanyComponent},
   {path:'parent',component:ParentComponent},
-  {path:'calculator2',component:Calculator2Component}
+  {path:'calculator2',component:Calculator2Component},
+  {path:'text',component:TextComponent},
+  {path:'about-company',component:AboutCompanyComponent},
+
+  {
+    path: 'payments',
+    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+  },
+  {path:'itemsparent',component:ItemsparentComponent}
   
  
 ]},
@@ -86,7 +98,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],  
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy:PreloadAllModules})],  
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

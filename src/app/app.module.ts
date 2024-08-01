@@ -47,6 +47,14 @@ import { Sibling2Component } from './sibling2/sibling2.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
 import { OperationsComponent } from './operations/operations.component';
 import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
+import { TextComponent } from './text/text.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { NavComponent } from './nav/nav.component';
+import { IcartComponent } from './icart/icart.component';
+import { DiscountComponent } from './discount/discount.component';
+import { ItemsComponent } from './items/items.component';
+import { ItemsparentComponent } from './itemsparent/itemsparent.component';
 
 @NgModule({
   declarations: [
@@ -92,14 +100,22 @@ import { RatingComponent } from './rating/rating.component';
      Sibling2Component,
      Calculator2Component,
      OperationsComponent,
-     RatingComponent
+     RatingComponent,
+     TextareaComponent,
+     TextComponent,
+     NavComponent,
+     IcartComponent,
+     DiscountComponent,
+     ItemsComponent,
+     ItemsparentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

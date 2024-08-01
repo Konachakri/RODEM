@@ -1,0 +1,14 @@
+.main{
+    background-color: lightgreen;
+    height: 150px;
+    margin: 40px;
+    width: 90%;
+}
+
+.child{
+    margin: 40px;
+    background-color:lightslategray;
+    height: 200px;
+    width: 20%;
+    display: inline-block;
+}
