@@ -86,6 +86,10 @@ const routes: Routes = [
   {path:'text',component:TextComponent},
   {path:'about-company',component:AboutCompanyComponent},
   {path:'who'},
+
+  {path:'eee'},
+  {path:'pen'},
+
 {path:'nnn'},
 {path:'pencil'},
   {
