@@ -87,6 +87,7 @@ const routes: Routes = [
   {path:'who'},
 
   {path:'eee'},
+  {path:'pen'},
 
   {
     path: 'payments',
