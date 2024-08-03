@@ -70,6 +70,7 @@ const routes: Routes = [
   {path:'create-vehicle',component:CreateVehicleComponent},
   {path:'create-account',component:CreateAccountComponent},
   {path:'student',component:StudentComponent},
+  {path:'new -student'},
   {path:'create-student',component:CreateStudentComponent},
   {path:'vehicle-details/:id',component:VehicleDetailsComponent},
   {path:'edit-vehicle/:id',component:CreateVehicleComponent},
@@ -83,6 +84,7 @@ const routes: Routes = [
   {path:'calculator2',component:Calculator2Component},
   {path:'text',component:TextComponent},
   {path:'about-company',component:AboutCompanyComponent},
+  {path:'who'},
 
   {
     path: 'payments',
