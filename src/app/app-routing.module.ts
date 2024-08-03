@@ -87,6 +87,7 @@ const routes: Routes = [
   {path:'about-company',component:AboutCompanyComponent},
   {path:'who'},
 {path:'nnn'},
+{path:'pencil'},
   {
     path: 'payments',
     loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
