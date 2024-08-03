@@ -79,6 +79,7 @@ const routes: Routes = [
   {path:'student-details/:id',component:StudentDetailsComponent},
   {path:'edit-student/:id',component:CreateStudentComponent},
   {path:'User', canDeactivate:[NotifyGuard],component:UserComponent},
+  {path:'new-user'},
   {path:'company',canDeactivate:[NotifyGuard],component:CompanyComponent},
   {path:'parent',component:ParentComponent},
   {path:'calculator2',component:Calculator2Component},
